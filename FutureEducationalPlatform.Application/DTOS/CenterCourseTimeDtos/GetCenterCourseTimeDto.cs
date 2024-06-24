@@ -9,6 +9,6 @@ namespace FutureEducationalPlatform.Application.DTOS.CenterCourseTimeDtos
     public record GetCenterCourseTimeDto
         (
             DayOfWeek LectureDay,
-            TimeSpan LectureTime
+            TimeOnly LectureTime
         );
 }

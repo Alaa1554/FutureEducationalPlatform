@@ -18,7 +18,7 @@ namespace FutureEducationalPlatform.Persistence.Migrations
                     CenterId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CourseId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     LectureDay = table.Column<int>(type: "int", nullable: false),
-                    LectureTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    LectureTime = table.Column<TimeOnly>(type: "time", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

@@ -8,7 +8,7 @@ namespace FutureEducationalPlatform.Application.DTOS.CenterCourseTimeDtos
 {
     public record UpdateCenterCourseTimeDto : BaseCenterCourseTimeDto
     {
-        public UpdateCenterCourseTimeDto(Guid CenterId, Guid CourseId, DayOfWeek LectureDay, TimeSpan LectureTime) : base(CenterId, CourseId, LectureDay, LectureTime)
+        public UpdateCenterCourseTimeDto(Guid CenterId, Guid CourseId, DayOfWeek LectureDay, TimeOnly LectureTime) : base(CenterId, CourseId, LectureDay, LectureTime)
         {
         }
     }

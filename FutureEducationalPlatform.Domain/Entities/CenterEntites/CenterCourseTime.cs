@@ -13,7 +13,7 @@ namespace FutureEducationalPlatform.Domain.Entities.CenterEntites
         public Guid CenterId { get; set; }
         public Guid CourseId { get; set; }
         public DayOfWeek LectureDay { get; set; }
-        public TimeSpan LectureTime { get; set; }
+        public TimeOnly LectureTime { get; set; }
         public virtual Course Course { get; set; }
         public virtual Center Center { get; set; }
     }

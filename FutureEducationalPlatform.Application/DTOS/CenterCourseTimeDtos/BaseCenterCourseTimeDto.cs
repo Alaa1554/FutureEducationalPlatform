@@ -11,6 +11,6 @@ namespace FutureEducationalPlatform.Application.DTOS.CenterCourseTimeDtos
         Guid CenterId,
         Guid CourseId,
         DayOfWeek LectureDay,
-        TimeSpan LectureTime
+        TimeOnly LectureTime
     );
 }

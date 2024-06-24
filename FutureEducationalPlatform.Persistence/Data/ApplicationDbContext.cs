@@ -1,9 +1,11 @@
 ﻿using FutureEducationalPlatform.Domain.Entities.CenterEntites;
 using FutureEducationalPlatform.Domain.Entities.CourseEntites;
+using FutureEducationalPlatform.Domain.Entities.ExamEntites;
 using FutureEducationalPlatform.Domain.Entities.QuestionEntites;
 using FutureEducationalPlatform.Domain.Entities.UserEntities;
 using FutureEducationalPlatform.Persistence.EntityConfiguration.CenterEntitesConfiguration;
 using FutureEducationalPlatform.Persistence.EntityConfiguration.CourseEntitesConfiguration;
+using FutureEducationalPlatform.Persistence.EntityConfiguration.HomeworkConfiguration;
 using FutureEducationalPlatform.Persistence.EntityConfiguration.QuestionEntitesConfiguration;
 using FutureEducationalPlatform.Persistence.EntityConfiguration.UserEntitiesConfiguration;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +34,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.ApplyConfiguration(new CenterCourseTimeConfiguration());
         modelBuilder.ApplyConfiguration(new QuestionEntityConfiguration());
         modelBuilder.ApplyConfiguration(new CourseSectionConfiguration());
+        modelBuilder.ApplyConfiguration(new HomeworkConfiguration());
     }
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
@@ -45,6 +48,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<CenterCourseTime> CentersCourseTime { get; set; }
     public DbSet<Question> Questions { get; set; }
     public DbSet<CourseSection> CourseSections { get; set; }
+    public DbSet<Homework> Homeworks { get; set; }
 
 }
 
